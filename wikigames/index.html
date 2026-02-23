@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wikigames — Ігрова Енциклопедія</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     INTRO / SPLASH SCREEN
+═══════════════════════════════════════════════════ -->
+<div id="intro-screen" aria-hidden="true">
+  <div class="intro-grid"></div>
+
+  <!-- Corner brackets -->
+  <div class="intro-corner tl"></div>
+  <div class="intro-corner tr"></div>
+  <div class="intro-corner bl"></div>
+  <div class="intro-corner br"></div>
+
+  <div class="intro-logo-wrap">
+    <!-- Rotating emblem -->
+    <div class="intro-emblem">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer ring -->
+        <circle cx="50" cy="50" r="47" stroke="#00f5ff" stroke-width="1.5" stroke-dasharray="6 4" opacity=".6"/>
+        <!-- Inner hexagon -->
+        <polygon points="50,12 84,31 84,69 50,88 16,69 16,31"
+                 stroke="#ff6b00" stroke-width="1.5" fill="none" opacity=".7"/>
+        <!-- Center diamond -->
+        <polygon points="50,30 66,50 50,70 34,50"
+                 stroke="#00f5ff" stroke-width="1.5" fill="rgba(0,245,255,0.06)"/>
+        <!-- Core dot -->
+        <circle cx="50" cy="50" r="5" fill="#ff6b00" opacity=".9"/>
+        <!-- Cross lines -->
+        <line x1="50" y1="12" x2="50" y2="30" stroke="#00f5ff" stroke-width="1" opacity=".5"/>
+        <line x1="50" y1="70" x2="50" y2="88" stroke="#00f5ff" stroke-width="1" opacity=".5"/>
+        <line x1="16" y1="50" x2="34" y2="50" stroke="#00f5ff" stroke-width="1" opacity=".5"/>
+        <line x1="66" y1="50" x2="84" y2="50" stroke="#00f5ff" stroke-width="1" opacity=".5"/>
+      </svg>
+    </div>
+
+    <!-- Expanding line -->
+    <div class="intro-line"></div>
+
+    <!-- Main title -->
+    <h1 class="intro-title">WIKIGAMES</h1>
+
+    <!-- Subtitle -->
+    <p class="intro-sub">Ігрова Енциклопедія</p>
+
+    <!-- Loading bar -->
+    <div class="intro-loading">
+      <div class="intro-loading-bar-wrap">
+        <div class="intro-loading-bar"></div>
+      </div>
+      <span class="intro-loading-text">ІНІЦІАЛІЗАЦІЯ СИСТЕМИ...</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     MAIN CONTENT
+═══════════════════════════════════════════════════ -->
+<div id="main-content">
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">WIKI<span>GAMES</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Головна</a></li>
+      <li><a href="history.html">Half-Life 2</a></li>
+      <li><a href="contact.html">Контакти</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-particles"></div>
+
+    <span class="hero-eyebrow">// Ласкаво просимо до</span>
+    <h1 class="hero-title">
+      <span class="word-wiki">WIKI</span><span class="word-games">GAMES</span>
+    </h1>
+    <p class="hero-desc">
+      <span id="typing-text" style="color:var(--neon-cyan);font-family:var(--font-title);font-size:1.1rem;letter-spacing:.08em;"></span>
+      <br/>
+      Детальні статті, повні хронології та глибокий аналіз найкращих відеоігор усіх часів.
+    </p>
+    <div class="hero-actions">
+      <a href="history.html" class="btn-hl2">
+        ⟩ Історія Half-Life 2
+      </a>
+      <a href="contact.html" class="btn-secondary">Зв'язатись з нами</a>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-inner">
+        <div class="stat-item">
+          <span class="stat-number" data-target="500" data-suffix="+">0+</span>
+          <span class="stat-label">Статей</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="120" data-suffix="+">0+</span>
+          <span class="stat-label">Ігор</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="30" data-suffix="к+">0к+</span>
+          <span class="stat-label">Читачів</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="15" data-suffix="+">0+</span>
+          <span class="stat-label">Жанрів</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED — HALF-LIFE 2 -->
+  <section class="featured">
+    <div class="container">
+      <div class="featured-inner">
+        <div>
+          <span class="featured-badge">⭐ Стаття Тижня</span>
+          <h2 class="featured-title">Half-Life<br/><span>2</span></h2>
+          <p class="featured-desc">
+            Революційний шутер від Valve, що назавжди змінив ігрову індустрію.
+            Фізичний рушій Source, живий Сіті-17 та доля Гордона Фрімена —
+            все це в нашій повній ігровій хроніці.
+          </p>
+          <div class="featured-meta">
+            <div class="meta-item">
+              <span class="meta-label">Рік виходу</span>
+              <span class="meta-value">2004</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Розробник</span>
+              <span class="meta-value">Valve</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Жанр</span>
+              <span class="meta-value">FPS</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Рейтинг</span>
+              <span class="meta-value">96 / 100</span>
+            </div>
+          </div>
+          <a href="history.html" class="btn-primary">Читати повну статтю</a>
+        </div>
+        <div class="featured-visual">
+          <div class="featured-visual-inner">
+            <div class="corner-bracket tl"></div>
+            <div class="corner-bracket tr"></div>
+            <div class="corner-bracket bl"></div>
+            <div class="corner-bracket br"></div>
+            <div class="hl2-art">
+              <div class="lambda-bg">λ</div>
+              <div class="hl2-scene">
+                <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- HEV suit silhouette stylized -->
+                  <!-- Helmet -->
+                  <ellipse cx="100" cy="44" rx="32" ry="38" stroke="#ff6b00" stroke-width="1.5" fill="rgba(255,107,0,0.05)"/>
+                  <ellipse cx="100" cy="46" rx="20" ry="18" stroke="#00f5ff" stroke-width="1" fill="rgba(0,245,255,0.04)"/>
+                  <!-- Visor glow -->
+                  <ellipse cx="100" cy="46" rx="14" ry="10" fill="rgba(0,245,255,0.12)"/>
+                  <!-- Body torso -->
+                  <rect x="70" y="82" width="60" height="70" rx="4" stroke="#ff6b00" stroke-width="1.5" fill="rgba(255,107,0,0.05)"/>
+                  <!-- HEV logo on chest -->
+                  <text x="100" y="122" text-anchor="middle" font-family="monospace" font-size="14" font-weight="900" fill="#ff6b00" opacity=".9">HEV</text>
+                  <!-- Left arm -->
+                  <rect x="38" y="86" width="28" height="58" rx="6" stroke="#ff6b00" stroke-width="1.2" fill="rgba(255,107,0,0.04)"/>
+                  <!-- Right arm — crowbar -->
+                  <rect x="134" y="86" width="28" height="58" rx="6" stroke="#ff6b00" stroke-width="1.2" fill="rgba(255,107,0,0.04)"/>
+                  <!-- Crowbar in right hand -->
+                  <rect x="160" y="68" width="5" height="90" rx="2.5" stroke="#00f5ff" stroke-width="1" fill="rgba(0,245,255,0.15)"/>
+                  <rect x="155" y="68" width="16" height="8" rx="2" stroke="#00f5ff" stroke-width="1" fill="rgba(0,245,255,0.1)"/>
+                  <!-- Legs -->
+                  <rect x="72" y="152" width="24" height="54" rx="4" stroke="#ff6b00" stroke-width="1.2" fill="rgba(255,107,0,0.04)"/>
+                  <rect x="104" y="152" width="24" height="54" rx="4" stroke="#ff6b00" stroke-width="1.2" fill="rgba(255,107,0,0.04)"/>
+                  <!-- Boots -->
+                  <rect x="68" y="198" width="32" height="14" rx="3" stroke="#ff6b00" stroke-width="1" fill="rgba(255,107,0,0.07)"/>
+                  <rect x="100" y="198" width="32" height="14" rx="3" stroke="#ff6b00" stroke-width="1" fill="rgba(255,107,0,0.07)"/>
+                  <!-- Neck / collar -->
+                  <rect x="88" y="78" width="24" height="10" rx="3" stroke="#ff6b00" stroke-width="1" fill="rgba(255,107,0,0.06)"/>
+                  <!-- Glow dot shoulders -->
+                  <circle cx="70" cy="86" r="4" fill="#ff6b00" opacity=".7"/>
+                  <circle cx="130" cy="86" r="4" fill="#ff6b00" opacity=".7"/>
+                  <!-- Belt detail -->
+                  <rect x="70" y="146" width="60" height="8" rx="2" stroke="#00f5ff" stroke-width="1" fill="rgba(0,245,255,0.06)"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES / CARDS -->
+  <section class="categories">
+    <div class="container">
+      <div class="categories-header">
+        <span class="section-label">// Жанри та Категорії</span>
+        <h2 class="section-title">Досліджуй Ігровий Всесвіт</h2>
+        <div class="section-divider center"></div>
+      </div>
+      <div class="cards-grid">
+        <!-- Card 1 -->
+        <div class="game-card">
+          <div class="game-card-icon">
+            <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="50" height="50" rx="4" stroke="#00f5ff" stroke-width="1.2" fill="none"/>
+              <circle cx="26" cy="26" r="12" stroke="#00f5ff" stroke-width="1.5" fill="rgba(0,245,255,.06)"/>
+              <line x1="26" y1="14" x2="26" y2="9" stroke="#00f5ff" stroke-width="1.5"/>
+              <line x1="26" y1="43" x2="26" y2="38" stroke="#00f5ff" stroke-width="1.5"/>
+              <line x1="14" y1="26" x2="9" y2="26" stroke="#00f5ff" stroke-width="1.5"/>
+              <line x1="43" y1="26" x2="38" y2="26" stroke="#00f5ff" stroke-width="1.5"/>
+              <circle cx="26" cy="26" r="4" fill="#00f5ff"/>
+            </svg>
+          </div>
+          <h3 class="game-card-title">Шутери від першої особи</h3>
+          <p class="game-card-desc">Від Doom до Modern Warfare — повна хроніка FPS-жанру, що змінив індустрію.</p>
+          <span class="game-card-tag tag-cyan">42 статті</span>
+        </div>
+        <!-- Card 2 -->
+        <div class="game-card">
+          <div class="game-card-icon">
+            <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="26,3 49,14 49,38 26,49 3,38 3,14" stroke="#ff6b00" stroke-width="1.2" fill="none"/>
+              <polygon points="26,14 38,20 38,32 26,38 14,32 14,20" stroke="#ff6b00" stroke-width="1" fill="rgba(255,107,0,.06)"/>
+              <circle cx="26" cy="26" r="5" fill="#ff6b00"/>
+            </svg>
+          </div>
+          <h3 class="game-card-title">Рольові ігри (RPG)</h3>
+          <p class="game-card-desc">The Witcher, Dark Souls, Elder Scrolls — занурся у найглибші ігрові всесвіти.</p>
+          <span class="game-card-tag tag-orange">68 статей</span>
+        </div>
+        <!-- Card 3 -->
+        <div class="game-card">
+          <div class="game-card-icon">
+            <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="20" width="40" height="24" rx="3" stroke="#00ff88" stroke-width="1.2" fill="none"/>
+              <circle cx="16" cy="32" r="4" stroke="#00ff88" stroke-width="1.2" fill="rgba(0,255,136,.07)"/>
+              <rect x="30" y="28" width="3" height="3" fill="#00ff88"/>
+              <rect x="36" y="28" width="3" height="3" fill="#00ff88"/>
+              <rect x="33" y="25" width="3" height="3" fill="#00ff88"/>
+              <rect x="33" y="31" width="3" height="3" fill="#00ff88"/>
+              <line x1="22" y1="20" x2="22" y2="12" stroke="#00ff88" stroke-width="1.2"/>
+              <line x1="30" y1="20" x2="30" y2="12" stroke="#00ff88" stroke-width="1.2"/>
+              <line x1="22" y1="12" x2="30" y2="12" stroke="#00ff88" stroke-width="1.2"/>
+            </svg>
+          </div>
+          <h3 class="game-card-title">Платформери та інді</h3>
+          <p class="game-card-desc">Hollow Knight, Celeste, Ori — кращі незалежні ігри, що підкорили серця гравців.</p>
+          <span class="game-card-tag tag-green">35 статей</span>
+        </div>
+        <!-- Card 4 -->
+        <div class="game-card">
+          <div class="game-card-icon">
+            <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="4" width="20" height="20" rx="2" stroke="#ff0040" stroke-width="1.2" fill="none"/>
+              <rect x="28" y="4" width="20" height="20" rx="2" stroke="#ff0040" stroke-width="1.2" fill="none"/>
+              <rect x="4" y="28" width="20" height="20" rx="2" stroke="#ff0040" stroke-width="1.2" fill="none"/>
+              <rect x="28" y="28" width="20" height="20" rx="2" stroke="#ff0040" stroke-width="1.2" fill="none"/>
+              <line x1="14" y1="14" x2="38" y2="38" stroke="#ff0040" stroke-width="1" stroke-dasharray="3 3"/>
+              <line x1="38" y1="14" x2="14" y2="38" stroke="#ff0040" stroke-width="1" stroke-dasharray="3 3"/>
+            </svg>
+          </div>
+          <h3 class="game-card-title">Стратегії та симулятори</h3>
+          <p class="game-card-desc">Civilization, StarCraft, Cities Skylines — майстерність тактики та управління.</p>
+          <span class="game-card-tag tag-red">29 статей</span>
+        </div>
+        <!-- Card 5 -->
+        <div class="game-card">
+          <div class="game-card-icon">
+            <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M26 4 L46 26 L26 48 L6 26 Z" stroke="#00f5ff" stroke-width="1.2" fill="none"/>
+              <path d="M26 12 L38 26 L26 40 L14 26 Z" stroke="#ff6b00" stroke-width="1" fill="rgba(255,107,0,.04)"/>
+              <circle cx="26" cy="26" r="6" stroke="#00f5ff" stroke-width="1.2" fill="rgba(0,245,255,.07)"/>
+              <circle cx="26" cy="26" r="2" fill="#ff6b00"/>
+            </svg>
+          </div>
+          <h3 class="game-card-title">Жахи та виживання</h3>
+          <p class="game-card-desc">Resident Evil, Silent Hill, Outlast — атмосфера страху, що не відпускає.</p>
+          <span class="game-card-tag tag-cyan">21 стаття</span>
+        </div>
+        <!-- Card 6 -->
+        <div class="game-card">
+          <div class="game-card-icon">
+            <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="26" cy="26" r="22" stroke="#00ff88" stroke-width="1.2" fill="none"/>
+              <path d="M26 10 Q36 18 36 26 Q36 34 26 42 Q16 34 16 26 Q16 18 26 10Z" stroke="#00ff88" stroke-width="1" fill="rgba(0,255,136,.05)"/>
+              <circle cx="26" cy="26" r="4" stroke="#00ff88" stroke-width="1" fill="rgba(0,255,136,.1)"/>
+              <line x1="26" y1="4" x2="26" y2="10" stroke="#00ff88" stroke-width="1.5"/>
+              <line x1="26" y1="42" x2="26" y2="48" stroke="#00ff88" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3 class="game-card-title">Відкритий світ (Open World)</h3>
+          <p class="game-card-desc">GTA, RDR2, The Legend of Zelda — необмежені простори для пригод.</p>
+          <span class="game-card-tag tag-green">53 статті</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">WIKI<span>GAMES</span></div>
+          <p class="footer-tagline">
+            Найповніша українська ігрова енциклопедія. Занурся у світ відеоігор разом з нами — від класики до сучасності.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Навігація</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="history.html">Half-Life 2</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Жанри</h4>
+          <ul class="footer-links">
+            <li><a href="#">Шутери</a></li>
+            <li><a href="#">RPG</a></li>
+            <li><a href="#">Стратегії</a></li>
+            <li><a href="#">Інді</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Ресурси</h4>
+          <ul class="footer-links">
+            <li><a href="#">Про проєкт</a></li>
+            <li><a href="#">Редакція</a></li>
+            <li><a href="#">Статистика</a></li>
+            <li><a href="#">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          © 2024 <span>Wikigames</span> — Ігрова Енциклопедія. Всі права захищені.
+        </p>
+        <div class="footer-tech">
+          <span class="tech-badge">HTML5</span>
+          <span class="tech-badge">CSS3</span>
+          <span class="tech-badge">JS ES6+</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /#main-content -->
+
+<script src="script.js"></script>
+</body>
+</html>

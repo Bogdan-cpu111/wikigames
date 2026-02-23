@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Контакти — Wikigames</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">WIKI<span>GAMES</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Головна</a></li>
+    <li><a href="history.html">Half-Life 2</a></li>
+    <li><a href="contact.html" class="active">Контакти</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="contact-hero">
+  <div class="contact-bg"></div>
+  <div class="contact-grid-bg"></div>
+  <div style="position:relative;">
+    <span class="history-label" style="animation-delay:.1s;">// Зв'язок з нами</span>
+    <h1 class="history-title" style="animation-delay:.2s;">
+      <span class="t1">Зворотній</span><br/><span class="t2">Зв'язок</span>
+    </h1>
+    <p style="color:var(--text-dim);font-size:1rem;margin-top:12px;opacity:0;animation:fadeInUp .7s ease .35s forwards;max-width:500px;margin-left:auto;margin-right:auto;">
+      Маєш ідею для статті, знайшов помилку чи просто хочеш поспілкуватись?
+      Напиши нам — відповімо якнайшвидше.
+    </p>
+  </div>
+</header>
+
+<!-- CONTACT FORM -->
+<main>
+<div class="contact-content">
+
+  <!-- INFO BOXES -->
+  <div class="contact-info" style="margin-bottom:50px;opacity:0;animation:fadeInUp .7s ease .5s forwards;">
+    <div class="contact-info-item">
+      <div class="ci-icon">
+        <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="10" width="36" height="24" rx="3" stroke="#00f5ff" stroke-width="1.5" fill="none"/>
+          <path d="M4 13 L22 25 L40 13" stroke="#00f5ff" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="ci-title">Email</div>
+      <div class="ci-val">info@wikigames.ua</div>
+    </div>
+    <div class="contact-info-item">
+      <div class="ci-icon">
+        <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="22" cy="22" r="18" stroke="#00f5ff" stroke-width="1.5" fill="none"/>
+          <path d="M22 10 L22 22 L30 26" stroke="#00f5ff" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="ci-title">Відповідь</div>
+      <div class="ci-val">Протягом 24 годин</div>
+    </div>
+    <div class="contact-info-item">
+      <div class="ci-icon">
+        <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 4 C14 4 8 10 8 18 C8 28 22 40 22 40 C22 40 36 28 36 18 C36 10 30 4 22 4Z" stroke="#00f5ff" stroke-width="1.5" fill="none"/>
+          <circle cx="22" cy="18" r="5" stroke="#00f5ff" stroke-width="1.5" fill="rgba(0,245,255,.07)"/>
+        </svg>
+      </div>
+      <div class="ci-title">Розташування</div>
+      <div class="ci-val">Україна, онлайн</div>
+    </div>
+  </div>
+
+  <!-- FORM CARD -->
+  <div class="contact-form-wrap" style="opacity:0;animation:fadeInUp .8s ease .6s forwards;">
+    <!-- Form -->
+    <form id="contact-form" novalidate>
+      <div style="margin-bottom:32px;">
+        <span class="section-label" style="font-size:.9rem;letter-spacing:.2em;margin-bottom:4px;display:block;">
+          НАПИШІТЬ НАМ
+        </span>
+        <div class="section-divider" style="margin-bottom:0;width:50px;"></div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="contact-name">Ваше ім'я</label>
+        <input
+          class="form-input"
+          type="text"
+          id="contact-name"
+          name="name"
+          placeholder="Ґордон Фрімен"
+          autocomplete="name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="contact-email">Email-адреса</label>
+        <input
+          class="form-input"
+          type="email"
+          id="contact-email"
+          name="email"
+          placeholder="gordon@blackmesa.ua"
+          autocomplete="email"
+        />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="contact-message">Повідомлення</label>
+        <textarea
+          class="form-textarea"
+          id="contact-message"
+          name="message"
+          placeholder="Вашe повідомлення..."
+          rows="6"
+        ></textarea>
+      </div>
+
+      <button type="submit" class="form-submit">
+        ⟩ Надіслати повідомлення
+      </button>
+    </form>
+
+    <!-- Success Message -->
+    <div id="success-msg" class="success-msg">
+      <div class="success-icon">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polyline points="8,20 16,28 32,12" stroke="#00ff88" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h2 class="success-title">Повідомлення надіслано!</h2>
+      <p class="success-text">
+        Дякуємо за ваш відгук! Ми обов'язково прочитаємо ваше повідомлення
+        та відповімо протягом доби. Разом робимо Wikigames кращим!
+      </p>
+      <a href="index.html" class="btn-secondary" style="margin: 30px auto 0; display:inline-block;">
+        ← Повернутись на головну
+      </a>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div style="margin-top:60px;opacity:0;animation:fadeInUp .8s ease .8s forwards;">
+    <span class="section-label">// Часті запитання</span>
+    <h2 class="section-title" style="margin-bottom:8px;">FAQ</h2>
+    <div class="section-divider"></div>
+
+    <div id="faq-list">
+      <div class="faq-item" style="
+        border: 1px solid var(--border);
+        margin-bottom: 12px;
+        overflow: hidden;
+        transition: .3s ease;
+      ">
+        <button class="faq-q" onclick="toggleFaq(this)" style="
+          width:100%; text-align:left; padding:18px 22px;
+          background:var(--bg-card); border:none; cursor:pointer;
+          font-family:var(--font-title); font-size:.85rem; letter-spacing:.06em;
+          color:var(--text-main); display:flex; justify-content:space-between; align-items:center;
+          transition:.3s ease;
+        ">
+          Як запропонувати нову статтю?
+          <span class="faq-arrow" style="color:var(--neon-cyan); font-size:1.2rem; transition:.3s;">+</span>
+        </button>
+        <div class="faq-a" style="
+          max-height:0; overflow:hidden; transition:.4s ease;
+          padding:0 22px; font-size:.95rem; color:var(--text-dim); line-height:1.7;
+        ">
+          <div style="padding: 16px 0;">
+            Напишіть нам через форму вище або на email. Вкажіть назву гри,
+            короткий опис ідеї та ваші джерела інформації. Редакція розгляне
+            запит і зв'яжеться з вами.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" style="
+        border: 1px solid var(--border);
+        margin-bottom: 12px;
+        overflow: hidden;
+        transition: .3s ease;
+      ">
+        <button class="faq-q" onclick="toggleFaq(this)" style="
+          width:100%; text-align:left; padding:18px 22px;
+          background:var(--bg-card); border:none; cursor:pointer;
+          font-family:var(--font-title); font-size:.85rem; letter-spacing:.06em;
+          color:var(--text-main); display:flex; justify-content:space-between; align-items:center;
+          transition:.3s ease;
+        ">
+          Чи можна стати автором Wikigames?
+          <span class="faq-arrow" style="color:var(--neon-cyan); font-size:1.2rem; transition:.3s;">+</span>
+        </button>
+        <div class="faq-a" style="
+          max-height:0; overflow:hidden; transition:.4s ease;
+          padding:0 22px; font-size:.95rem; color:var(--text-dim); line-height:1.7;
+        ">
+          <div style="padding: 16px 0;">
+            Так! Ми завжди шукаємо ентузіастів, що вміють цікаво писати про ігри.
+            Надішліть своє CV та приклад ігрового тексту — розглянемо протягом
+            тижня.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" style="
+        border: 1px solid var(--border);
+        margin-bottom: 12px;
+        overflow: hidden;
+        transition: .3s ease;
+      ">
+        <button class="faq-q" onclick="toggleFaq(this)" style="
+          width:100%; text-align:left; padding:18px 22px;
+          background:var(--bg-card); border:none; cursor:pointer;
+          font-family:var(--font-title); font-size:.85rem; letter-spacing:.06em;
+          color:var(--text-main); display:flex; justify-content:space-between; align-items:center;
+          transition:.3s ease;
+        ">
+          Як повідомити про помилку в статті?
+          <span class="faq-arrow" style="color:var(--neon-cyan); font-size:1.2rem; transition:.3s;">+</span>
+        </button>
+        <div class="faq-a" style="
+          max-height:0; overflow:hidden; transition:.4s ease;
+          padding:0 22px; font-size:.95rem; color:var(--text-dim); line-height:1.7;
+        ">
+          <div style="padding: 16px 0;">
+            Використовуй форму вище: вкажи назву статті, номер розділу та опис
+            помилки. Ми цінуємо точність і виправляємо неточності максимально
+            швидко — зазвичай протягом кількох годин.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" style="
+        border: 1px solid var(--border);
+        margin-bottom: 12px;
+        overflow: hidden;
+        transition: .3s ease;
+      ">
+        <button class="faq-q" onclick="toggleFaq(this)" style="
+          width:100%; text-align:left; padding:18px 22px;
+          background:var(--bg-card); border:none; cursor:pointer;
+          font-family:var(--font-title); font-size:.85rem; letter-spacing:.06em;
+          color:var(--text-main); display:flex; justify-content:space-between; align-items:center;
+          transition:.3s ease;
+        ">
+          Чи є реклама на сайті?
+          <span class="faq-arrow" style="color:var(--neon-cyan); font-size:1.2rem; transition:.3s;">+</span>
+        </button>
+        <div class="faq-a" style="
+          max-height:0; overflow:hidden; transition:.4s ease;
+          padding:0 22px; font-size:.95rem; color:var(--text-dim); line-height:1.7;
+        ">
+          <div style="padding: 16px 0;">
+            Wikigames існує заради пристрасті до ігор, а не прибутку.
+            Наразі сайт повністю безрекламний. Підтримайте нас, розповідаючи
+            про нас друзям-геймерам!
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="index.html" class="back-btn">Назад на головну</a>
+</div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">WIKI<span>GAMES</span></div>
+        <p class="footer-tagline">Найповніша українська ігрова енциклопедія.</p>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Навігація</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="history.html">Half-Life 2</a></li>
+          <li><a href="contact.html">Контакти</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Жанри</h4>
+        <ul class="footer-links">
+          <li><a href="#">Шутери</a></li>
+          <li><a href="#">RPG</a></li>
+          <li><a href="#">Стратегії</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Контакт</h4>
+        <ul class="footer-links">
+          <li><a href="contact.html">Написати нам</a></li>
+          <li><a href="#">Редакція</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2024 <span>Wikigames</span> — Ігрова Енциклопедія</p>
+      <div class="footer-tech">
+        <span class="tech-badge">HTML5</span>
+        <span class="tech-badge">CSS3</span>
+        <span class="tech-badge">JS ES6+</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const answer = item.querySelector('.faq-a');
+  const arrow = btn.querySelector('.faq-arrow');
+  const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+
+  // Close all
+  document.querySelectorAll('.faq-a').forEach(a => a.style.maxHeight = '0');
+  document.querySelectorAll('.faq-arrow').forEach(a => { a.textContent = '+'; a.style.transform = ''; });
+  document.querySelectorAll('.faq-q').forEach(q => q.style.color = 'var(--text-main)');
+
+  if (!isOpen) {
+    answer.style.maxHeight = answer.scrollHeight + 40 + 'px';
+    arrow.textContent = '−';
+    btn.style.color = 'var(--neon-cyan)';
+  }
+}
+</script>
+</body>
+</html>
